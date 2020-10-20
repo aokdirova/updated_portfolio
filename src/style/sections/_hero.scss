@@ -1,10 +1,9 @@
 #hero {
-  min-height: 100vh;
-  height: 100vh;
+  min-height: 95vh;
+  height: 95vh;
   display: flex;
   align-items: center;
   border-bottom: 0px;
-  background: $white-color;
   font-weight: 400;
   color: $dark-blue-text;
   padding: 0rem 5.6rem;
@@ -14,12 +13,27 @@
   bottom: 0;
   right: 0;
   z-index: -1;
-
-  // If you want to set a background image on the hero section, uncomment these with yout custom image
-
-  /* background: url("/src/assets/[your-image].png");
+  background: linear-gradient(
+      -45deg,
+      rgba(67, 147, 163, 0.5) 0%,
+      rgba(67, 147, 163, 0.5) 59%,
+      rgba(93, 161, 169,0.5) 59%,
+      rgba(93, 161, 169,0.5) 65%,
+      rgba(119, 175, 175,0.5) 65%,
+      rgba(119, 175, 175,0.5) 70%,
+      rgba(145, 190, 181,0.5) 70%,
+      rgba(145, 190, 181,0.5) 73%,
+      rgba(171, 204, 187,0.5) 73%,
+      rgba(171, 204, 187,0.5) 78%,
+      rgba(197, 218, 193,0.5) 78%,
+      rgba(197, 218, 193,0.5) 100%
+    ),
+    url("/src/assets/Reuss.png");
   background-position: center;
-  background-size: cover; */
+  background-size: cover;
+
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 
   @include respond(phone) {
     padding: 0rem $default-font-size;
@@ -63,3 +77,4 @@
     }
   }
 }
+
